@@ -52,7 +52,7 @@ export default {
   padding: 20px;
   box-sizing: border-box;
   &:first-child {
-    margin-right: 20px;
+    margin-right: 30px;
   }
   &__text {
     font-family: "Inter-SemiBold", sans-serif;

@@ -69,7 +69,6 @@ export default {
   background-color: transparent;
   border: none;
   border-radius: 8px;
-  padding: 5px 10px;
   margin-right: 15px;
   cursor: pointer;
   &:last-child {
@@ -77,6 +76,7 @@ export default {
   }
   &.active {
     background-color: #2578f4;
+    padding: 5px 10px;
     color: #fff;
   }
 }

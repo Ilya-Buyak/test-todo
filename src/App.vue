@@ -43,14 +43,32 @@ export default {
 <style lang="scss">
 body {
   margin: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(240, 195, 252, 1),
+    rgba(215, 190, 252, 1),
+    rgba(188, 177, 252, 1),
+    rgba(161, 174, 252, 1),
+    rgba(148, 189, 252, 1),
+    rgba(142, 197, 252, 1)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 .main {
-  min-height: 100vh;
-  padding: 20px 0;
+  max-width: 730px;
+  min-width: 610px;
+  min-height: 80vh;
+  padding: 20px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 24px;
   &__image {
     margin-bottom: 20px;
   }

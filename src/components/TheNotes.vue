@@ -100,6 +100,13 @@ export default {
       this.over = { item, pos, dir };
     },
   },
+  watch: {
+    filteredNotes(value) {
+      if (!value.length) {
+        this.$store.dispatch("changeActiveButton", "All");
+      }
+    },
+  },
 };
 </script>
 

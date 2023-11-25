@@ -10,7 +10,7 @@
     />
     <span v-show="isShowError" class="error">Введите название</span>
     <button
-      v-if="isShowed"
+      v-show="isShowed"
       type="submit"
       class="button"
       @click.prevent="createTask"
@@ -95,7 +95,6 @@ export default {
     outline: none;
     color: #fff;
     cursor: pointer;
-    transition: 0.5s;
     &:hover {
       opacity: 0.7;
     }

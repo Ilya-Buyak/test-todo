@@ -27,13 +27,13 @@ const mutations = {
   },
   deleteNote(state, id) {
     Vue.delete(state.items, id);
-    this.commit("saveNotes");
+    this.dispatch("saveNotes");
   },
   toggleEdit(state, id) {
     state.items[id].isEditing = !state.items[id].isEditing;
     state.items[id].error = false;
     if (!state.items[id].isEditing) {
-      this.commit("saveNotes");
+      this.dispatch("saveNotes");
     }
   },
   saveNotes(state) {
@@ -48,7 +48,7 @@ const mutations = {
       isEditing: false,
       error: false,
     });
-    this.commit("saveNotes");
+    this.dispatch("saveNotes");
   },
   finishDrag(state, payload) {
     const notes = Object.entries(state.items);
@@ -58,13 +58,13 @@ const mutations = {
     notes.forEach((el) => {
       Vue.set(state.items, el[0], el[1]);
     });
-    this.commit("saveNotes");
+    this.dispatch("saveNotes");
   },
   checkAllNotes(state) {
     for (let note in state.items) {
       state.items[note].checked = true;
     }
-    this.commit("saveNotes");
+    this.dispatch("saveNotes");
   },
   clearCompleted(state) {
     const notes = Object.values(state.items);
@@ -74,7 +74,7 @@ const mutations = {
         Vue.set(state.items, note.id, note);
       }
     });
-    this.commit("saveNotes");
+    this.dispatch("saveNotes");
   },
   changeActiveButton(state, name) {
     state.activeButton = name;
