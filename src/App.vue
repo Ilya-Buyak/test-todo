@@ -57,6 +57,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
+  box-sizing: border-box;
 }
 .main {
   max-width: 730px;
