@@ -50,7 +50,7 @@ export default {
       } else {
         this.isShowError = false;
       }
-    }
+    },
   },
 };
 </script>

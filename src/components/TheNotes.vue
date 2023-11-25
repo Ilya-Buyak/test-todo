@@ -28,12 +28,18 @@
           @keydown.enter="editNote(item)"
           :ref="item.id"
         />
-        <p v-else class="note__name" :class="{ note__name_completed: item.checked }">
+        <p
+          v-else
+          class="note__name"
+          :class="{ note__name_completed: item.checked }"
+        >
           {{ item.value }}
         </p>
-        <span v-show="item.error" class="error">Название не может быть пустым</span>
+        <span v-show="item.error" class="error"
+          >Название не может быть пустым</span
+        >
         <div class="note__icons">
-          <IconPencil class="icon" @click.native="editNote(item)"/>
+          <IconPencil class="icon" @click.native="editNote(item)" />
           <IconRemove class="icon" @click.native="deleteNote(item.id)" />
         </div>
       </li>
