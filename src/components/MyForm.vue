@@ -36,20 +36,12 @@ export default {
   },
   methods: {
     createTask() {
-      if (!this.value) {
-        this.isShowError = true;
-      } else {
-        this.isShowError = false;
-        this.$store.dispatch("addNewTodo", this.value);
-        this.value = "";
-      }
+      if (!this.value) return;
+      this.$store.dispatch("addNewTodo", this.value);
+      this.value = "";
     },
     checkInput() {
-      if (!this.value) {
-        this.isShowError = true;
-      } else {
-        this.isShowError = false;
-      }
+      this.isShowError = !this.value;
     },
   },
 };
